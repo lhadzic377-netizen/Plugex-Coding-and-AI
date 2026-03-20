@@ -1,0 +1,134 @@
+================================================================================
+PLUGEX COMMUNITY STEWARDSHIP LICENSE v1.0
+================================================================================
+
+Copyright (c) 2026 [Madelyn Hadzic]. All Rights Reserved.
+
+--------------------------------------------------------------------------------
+1. PREAMBLE
+--------------------------------------------------------------------------------
+The Plugex Project is built on the belief that powerful AI tools should be 
+accessible to individuals, private by default, and protected from corporate 
+capture. This license grants you freedom to use, learn, and audit, while 
+strictly prohibiting commercial exploitation, resale, and redistribution.
+
+By installing, accessing, or using Plugex (the "Software"), you agree to be 
+bound by these terms.
+
+--------------------------------------------------------------------------------
+2. DEFINITIONS
+--------------------------------------------------------------------------------
+- "Licensor": The original creator(s) of Plugex ([YOUR NAME/HANDLE]).
+- "Software": The Plugex binary, CLI, GUI, agents, and associated files.
+- "Source Code": The human-readable form of the Software, including both 
+  public interface code and private core logic (if access is granted).
+- "Licensee": You, the individual or entity using the Software.
+- "Sustainability Fee": The one-time payment (currently €20) required to 
+  unlock full features, model discovery, and Source Code access.
+
+--------------------------------------------------------------------------------
+3. GRANT OF RIGHTS
+--------------------------------------------------------------------------------
+Subject to your compliance with this License, the Licensor grants you a 
+perpetual, non-exclusive, non-transferable, revocable license to:
+
+3.1 Personal Use
+Install and run the Software on any number of devices owned or controlled by 
+you for personal, non-commercial purposes only.
+
+3.2 Security Audit & Learning
+- If Paid: Upon payment of the Sustainability Fee, you may request access to 
+  the full Source Code to audit for security, verify privacy claims, and study 
+  the architecture.
+- If Free/Trial: You may view the publicly available portions of the Source 
+  Code strictly for learning purposes.
+
+3.3 Modification
+Modify the Source Code for your own personal use only. You may submit patches 
+or bug fixes to the official Licensor, but you MAY NOT distribute your 
+modified versions to third parties.
+--------------------------------------------------------------------------------
+4. RESTRICTIONS (THE "ANTI-THEFT" CLAUSES)
+--------------------------------------------------------------------------------
+You STRICTLY MAY NOT, under any circumstances:
+
+4.1 No Resale or Redistribution
+- Sell, lease, rent, sublicense, or otherwise transfer the Software or Source 
+  Code to any third party.
+- Upload the Source Code (in whole or in part) to public repositories (e.g., 
+  GitHub, GitLab), torrents, file-sharing sites, or paste bins.
+- Distribute modified versions of the Software ("Forks") to others.
+
+4.2 No Commercial SaaS or Hosting
+- Host the Software as a service, API, or managed platform for others to use 
+  (whether for free or paid).
+- Use the Software to provide commercial coding services to clients where the 
+  tool itself is the primary value provider.
+
+4.3 No Corporate Exploitation
+- Use the Software for commercial gain within a business entity without 
+  purchasing a separate Enterprise Agreement from the Licensor.
+- Circumvent the License Key verification system or Source Code access controls.
+
+4.4 No AI Training
+- Use the Source Code, output, internal logic, or architecture of Plugex to 
+  train, distill, or improve other Artificial Intelligence models or competing 
+  products.
+
+--------------------------------------------------------------------------------
+5. SOURCE CODE ACCESS & WATERMARKING
+--------------------------------------------------------------------------------
+- Conditional Access: Access to the private/core Source Code is a privilege 
+  granted solely to Licensees who have paid the Sustainability Fee.
+- Watermarking: The Source Code provided to you may contain unique identifiers 
+  (watermarks) linked to your License ID or User Account.
+- Leak Liability: If your watermarked Source Code is found publicly distributed 
+  or in a competitor's product, you will be presumed liable for the leak. The 
+  Licensor reserves the right to pursue maximum legal damages and injunctive 
+  relief.
+
+--------------------------------------------------------------------------------
+6. TERMINATION
+--------------------------------------------------------------------------------
+- Automatic Termination: Your rights under this license terminate immediately 
+  if you breach any term herein.
+- Effect of Termination: Upon termination, you must cease all use of the 
+  Software, delete all copies (binary and source), and destroy any modifications.
+- No Refund: Breach of this license voids any claim to a refund of the 
+  Sustainability Fee.
+--------------------------------------------------------------------------------
+7. COMMERCIAL LICENSING & PENALTIES
+--------------------------------------------------------------------------------
+If you wish to use Plugex for commercial purposes, inside a corporation, or as 
+part of a paid service, you MUST contact the Licensor to negotiate a separate 
+Commercial Enterprise License.
+
+Contact: [YOUR EMAIL ADDRESS]
+Website: [YOUR WEBSITE URL]
+
+Unauthorized Commercial Use Penalty:
+Any unauthorized commercial use incurs a retroactive fee of €5,000 (EUR) per 
+instance/user, plus all legal costs and damages incurred by the Licensor in 
+enforcing this license.
+
+--------------------------------------------------------------------------------
+8. DISCLAIMER OF WARRANTY
+--------------------------------------------------------------------------------
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+THE LICENSOR IS NOT RESPONSIBLE FOR ANY DAMAGES, DATA LOSS, CODE ERRORS, OR 
+SECURITY BREACHES ARISING FROM THE USE OF PLUGEX. YOU ARE SOLELY RESPONSIBLE 
+FOR VERIFYING THE CODE (VIA THE AUDIT RIGHT) BEFORE USING IT IN CRITICAL SYSTEMS.
+
+--------------------------------------------------------------------------------
+9. GOVERNING LAW
+--------------------------------------------------------------------------------
+This license shall be governed by the laws of [Spain], 
+without regard to its conflict of law principles. Any legal action must be 
+brought in the courts located in [Valencia].
+
+================================================================================
+END OF LICENSE
+================================================================================
