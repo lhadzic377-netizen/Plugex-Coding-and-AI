@@ -1,0 +1,128 @@
+Plugex AI Privacy-First Local AI Coding Assistant with Knowledge Shards Plugex AI is a local RAG (Retrieval-Augmented Generation) coding assistant that runs 100% on your machine. It uses a revolutionary Knowledge Shard architecture to provide fast, context-aware answers about your codebase and general programming knowledge.
+
+Features · 100% Local - No cloud, no API keys, your data never leaves your machine · Knowledge Shards - Modular, loadable knowledge units (not one big slow database) · Fast & Efficient - Only load what you need, when you need it · Multi-Model Support - Qwen 3.5 family (0.8B to 397B parameters) · Thinking Modes - Fast mode for quick answers, Thinking mode for deep reasoning · Source Attribution - Every answer shows exactly where it came from · Hardware Adaptive - Automatically recommends best model for your system
+
+Quick Start
+
+Start chatting
+plugex-ai chat
+
+Index your codebase
+plugex-ai index ./my-project
+
+Ask a question
+plugex-ai query “How does authentication work in this codebase?”
+
+Knowledge Shard Architecture Unlike traditional RAG systems that load everything into memory, Plugex uses Knowledge Shards: ~/.plugex/shards/ ├── core/ # Always available │ ├── algorithms # Sorting, searching, data structures │ ├── patterns # Design patterns & best practices │ └── errors # Common errors & fixes │ ├── languages/ # Load on demand │ ├── python # Python docs & examples │ ├── javascript # JavaScript/Node docs │ └── rust # Rust documentation │ ├── frameworks/ # Load on demand │ ├── react # React docs │ ├── django # Django docs │ └── fastapi # FastAPI docs │ └── projects/ # Your codebases ├── my-app # Your indexed projects └── work-project
+
+Why Shards? Feature Traditional RAG Knowledge Shards Memory Usage 10GB+ always loaded 50-200MB typical Load Time Slow (minutes) Instant Search Speed Slower (searches all) Faster (relevant shards only) Updates Rebuild everything Update single shard Scalability Limited Unlimited (1EB+ possible)
+
+Installation
+
+Clone the repository
+git clone cd plugex
+
+Run installer
+./install.sh
+
+Or manually link
+ln -s $(pwd)/plugex ~/bin/plugex-ai
+
+Requirements · Python 3.10+ · Ollama (for local LLM inference) · 4GB+ RAM (8GB+ recommended)
+
+Commands Chat
+
+Interactive chat
+plugex-ai chat
+
+With specific model
+plugex-ai chat –model qwen3.5:2b
+
+Fast mode (no thinking)
+plugex-ai chat –fast
+
+Thinking mode (better reasoning)
+plugex-ai chat –think
+
+In-chat commands: · /fast - Switch to fast mode · /think - Switch to thinking mode · /mode - Toggle between modes · /help - Show all commands · /quit - Exit chat Index Documents
+
+Index your codebase
+plugex-ai index ./my-project
+
+Index into specific shard
+plugex-ai index ./python-lib –shard python-docs
+
+Recursive indexing (default)
+plugex-ai index ./src –recursive
+
+Query
+
+Single question
+plugex-ai query “What does the auth function do?”
+
+With top-k results
+plugex-ai query “Explain sorting algorithms” –top-k 10
+
+Knowledge Shards
+
+List all shards
+plugex-ai shard list
+
+Create a new shard
+plugex-ai shard create my-project –category projects –languages python
+
+Load a shard into memory
+plugex-ai shard load python-docs
+
+Unload a shard
+plugex-ai shard unload python-docs
+
+Show shard info
+plugex-ai shard info algorithms
+
+Show shard manager stats
+plugex-ai shard stats
+
+Delete a shard
+plugex-ai shard delete my-project
+
+Models
+
+List available models
+plugex-ai models
+
+Switch model
+plugex-ai mode fast # Quick responses plugex-ai mode thinking # Better reasoning
+
+Status
+
+Show system status
+plugex-ai status
+
+Qwen 3.5 Model Family Model Size RAM Required Best For 0.8B 1.0GB 2GB Minimal systems 2B 2.7GB 4GB Low-RAM systems 4B 3.4GB 6GB Compact performance 8B 6.6GB 10GB Best balance 27B 17GB 24GB Complex reasoning 35B 24GB 32GB Premium quality 122B 81GB 96GB Flagship 397B 240GB 320GB Ultra-flagship
+
+Configuration Config stored in ~/.plugex/config.json: { “model”: “qwen3.5:2b”, “index_path”: “/home/user/.plugex/index”, “thinking_mode”: false }
+
+How It Works Query Flow 1. User asks: “How do I sort a list in Python?” ↓ 2. ShardManager detects: - Language: python - Topic: algorithm (sorting) ↓ 3. Auto-loads relevant shards: - core/algorithms - languages/python ↓ 4. Searches only those shards ↓ 5. Returns answer with sources
+
+Memory Management · Core shards stay in memory while chat is active · Language/Framework shards load on demand, expire after TTL · Project shards load when working on that project · LRU eviction when max shards reached
+
+Examples Debug Your Code plugex-ai chat
+
+/think Why is my auth middleware failing?
+
+[Plugex searches auth-related code in your project] [Returns specific answer with file:line references]
+
+Learn Algorithms plugex-ai query “Explain quicksort with Python example”
+
+[Plugex loads algorithms shard] [Returns explanation + code example]
+
+Code Review plugex-ai index ./my-project –shard my-project plugex-ai query “Review the user authentication flow” –shard my-project
+
+Architecture plugex/ ├── ai/ │ ├── shards/ # Knowledge Shard system │ │ ├── shard.py # Shard class │ │ └── manager.py # ShardManager with LRU │ ├── rag/ # RAG pipeline │ │ ├── pipeline.py # Main RAG logic │ │ ├── llm.py # LLM client │ │ └── prompts.py # Prompt templates │ ├── vector_index/ # Vector search │ ├── chunking/ # Document chunking │ └── config/ # Hardware detection ├── plugex # Main CLI └── scripts/ # Utility scripts
+
+Contributing 1. Fork the repository 2. Create a feature branch 3. Make your changes 4. Submit a pull request
+
+Custom License - See LICENSE file
+
+Acknowledgments · Built with Ollama for local LLM inference · Uses Qwen models by Alibaba Cloud · Inspired by RAG research from Meta, Google, and OpenAI
