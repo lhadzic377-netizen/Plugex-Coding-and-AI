@@ -2,7 +2,7 @@
 **Plugex Code & Plugex AI**  
 **Privacy-First Local AI Coding Assistant**  
 Plugex is a local-first AI coding platform that runs 100% on your machine. It combines the power of intelligent agents with revolutionary Knowledge Shard architecture for fast, context-aware coding assistance.  
-![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnEAAAACCAYAAAA3pIp+AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAANUlEQVR4nO3OQQmAABRAsSdYxZ4/mJjEsxE8W8GbCFuCLTOzVXsAAPzFuVZ3dXw9AQDgtesBxPEF3bv7x0IAAAAASUVORK5CYII=)  
+![]
 **Plugex Code**  
 A transparent AI coding partner with glass-box visibility, autonomous debugging, and multi-agent orchestration.  
 **Features**  
