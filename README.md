@@ -16,7 +16,7 @@ Plugex-Code is a privacy-first, local-first AI coding assistant that runs 100% o
 ·	KillPlug Security - Real-time security scanning and guardrails
 ·	Natural Language Interface - Just ask what you want in plain English
 ·	Autonomous Debugging - Self-correcting code generation
-·	Multi-Model Support - Works with Ollama, OpenAI, Anthropic, and more
+·	Multi-Model Support - Works with Ollama, LM Studio, and more
 
 🚀 Quick Install
 One-Line Install (Recommended)
