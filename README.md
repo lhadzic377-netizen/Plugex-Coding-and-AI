@@ -54,8 +54,8 @@ Plugex-Code
 # With specific provider
 Plugex-Code --provider ollama --model qwen 3.5:9b
 
-# With OpenAI
-Plugex-Code --provider openai --model gpt-5.4-Pro
+# With LM Studio
+Plugex-Code --provider LM Studio --model gemma:9B
 
 # Single message mode
 Plugex-Code --message "Create a Python function that sorts a list"
@@ -187,10 +187,10 @@ source ~/.bashrc
 
 Model Not Available
 # For Ollama, pull the model
-ollama pull qwen2.5:7b
+ollama pull qwen 3.5:9B
 
 # Or use a different provider
-Plugex-Code --provider openai --model gpt-4o-mini
+Plugex-Code --provider LM Studio -- Gemma:9B
 
 Permission Denied
 # Make executable
