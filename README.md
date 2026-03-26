@@ -52,10 +52,10 @@ Start Interactive Chat
 Plugex-Code
 
 # With specific provider
-Plugex-Code --provider ollama --model qwen2.5:7b
+Plugex-Code --provider ollama --model qwen 3.5:9b
 
 # With OpenAI
-Plugex-Code --provider openai --model gpt-4o-mini
+Plugex-Code --provider openai --model gpt-5.4-Pro
 
 # Single message mode
 Plugex-Code --message "Create a Python function that sorts a list"
