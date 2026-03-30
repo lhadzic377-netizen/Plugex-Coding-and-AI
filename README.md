@@ -1,213 +1,174 @@
- Plugex-Code
-AI Coding Assistant with Guardrails & Multi-Agent System
+# Agent Company OS
 
-<img width="329" height="93" alt="image" src="https://github.com/user-attachments/assets/baf45912-bb85-471a-9d4d-5ba7106a88e9" />
+Your AI-powered executive assistant. Run entirely on your computer.
 
+## 🎯 Vision
 
+Build the ultimate personal AI company operating system - a beautiful, powerful desktop application that runs 100% locally on your computer, where you are the CEO and AI agents are your employees. No cloud dependencies. No data leaving your machine. Complete control. Infinite customization.
 
+## ✨ Features
 
+### CEO Dashboard
+- Executive-style interface showing company health, team status, and projects
+- Real-time agent activity monitoring
+- Task delegation and tracking
+- Performance analytics
 
+### AI Employee Management
+- Hire unlimited AI agents with custom roles
+- 6 pre-built role templates (Research, Development, Content, Operations, Finance, Support)
+- Extensive personality customization with sliders
+- Visual avatar selection
+- Capability and permission configuration
 
+### Sandboxed Learning
+- Safe training environment with mock data
+- Structured training modules
+- Skill assessments and certifications
+- Continuous learning system
 
-🎯 Overview
-Plugex-Code is a privacy-first, local-first AI coding assistant that runs 100% on your machine. It features:
-·	Glass Box Visibility - See AI reasoning before any code changes
-·	100-Agent System - Create specialized agents for any task
-·	KillPlug Security - Real-time security scanning and guardrails
-·	Natural Language Interface - Just ask what you want in plain English
-·	Autonomous Debugging - Self-correcting code generation
-·	Multi-Model Support - Works with Ollama, LM Studio, and more
+### Local-First AI
+- Support for all local LLM providers:
+  - Ollama (bundled)
+  - LM Studio
+  - LocalAI
+  - KoboldCPP
+  - vLLM
+  - text-generation-webui
+  - And more...
+- Automatic provider discovery
+- Model fallback chains
+- No internet required
 
-🚀 Quick Install
-One-Line Install (Recommended)
-# Using curl
-curl -fsSL https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/Plugex-Code/main/install.sh | bash
+### Privacy & Security
+- All data stored locally
+- AES-256 encryption at rest
+- Password/biometric authentication
+- Zero telemetry by default
+- Encrypted backups
 
-# Or using wget
-wget -qO- https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/Plugex-Code/main/install.sh | bash
+## 🛠️ Tech Stack
 
-Manual Install
-# 1. Clone the repository
-git clone https://github.com/YOUR_GITHUB_USERNAME/Plugex-Code.git ~/Plugex-Code
-cd ~/Plugex-Code
+### Frontend
+- **Framework**: React 18 + TypeScript
+- **UI**: shadcn/ui + Radix UI
+- **Styling**: Tailwind CSS
+- **State**: Zustand + TanStack Query
+- **Routing**: React Router v6
 
-# 2. Run the installer
-./install.sh
+### Backend (Rust)
+- **Desktop**: Tauri
+- **Database**: SQLite (SQLCipher encrypted)
+- **Vector Store**: ChromaDB
+- **AI Runtime**: Python + FastAPI
 
-# 3. Add to PATH (if not already done)
-export PATH="$HOME/.local/bin:$PATH"
+## 🚀 Getting Started
 
-Requirements
-·	Python 3.10+
-·	pip and python3-venv
-·	Git (optional, for cloning)
-·	Ollama (optional, for local LLM)
-Install dependencies on Ubuntu/Debian:
-sudo apt update && sudo apt install python3 python3-pip python3-venv git
+### Prerequisites
 
+- Node.js 18+
+- Rust 1.70+
+- npm or pnpm
 
-🎮 Usage
-Start Interactive Chat
-# Default (uses configured model)
-Plugex-Code
+### Installation
 
-# With specific provider
-Plugex-Code --provider ollama --model qwen 3.5:9b
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-org/agent-company-os.git
+   cd agent-company-os
+   ```
 
-# With LM Studio
-Plugex-Code --provider LM Studio --model gemma:9B
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-# Single message mode
-Plugex-Code --message "Create a Python function that sorts a list"
+3. **Install Tauri CLI**
+   ```bash
+   npm install -g @tauri-apps/cli
+   ```
 
-Natural Language Commands
-Just ask in plain English:
-create a frontend developer agent
-create a python expert named py_helper
-list all agents
-write a Python script that calculates fibonacci numbers
-create a file called config.json with database settings
-delete the test.txt file
-show me git status
-explain how authentication works in this project
+4. **Run in development**
+   ```bash
+   npm run tauri:dev
+   ```
 
-Agent Management
-# Create specialized agents
-create a backend engineer named api_master
-create a security specialist called sec_guru
-create a devops engineer
-create a qa tester
-create a tech lead to review code
+5. **Build for production**
+   ```bash
+   npm run tauri:build
+   ```
 
-# Create teams
-create a web dev team
-create a coding team with frontend and backend agents
+## 📁 Project Structure
 
-# List and manage
-list all agents
-stop agent api_master
-remove agent sec_guru
+```
+agent-company-os/
+├── src-tauri/              # Rust backend
+│   ├── src/
+│   │   ├── main.rs         # Entry point
+│   │   ├── agent_runtime/  # Agent execution
+│   │   ├── model_provider/ # LLM integration
+│   │   ├── storage/        # Local database
+│   │   └── security/       # Encryption & auth
+│   └── Cargo.toml
+├── src/renderer/           # React frontend
+│   └── src/
+│       ├── components/     # UI components
+│       ├── stores/         # State management
+│       ├── types/          # TypeScript types
+│       └── styles/         # CSS
+├── resources/              # App resources
+└── package.json
+```
 
+## 📋 Roadmap
 
-🛡️ KillPlug Security
-Plugex-Code includes built-in security scanning:
-·	Prompt Injection Detection - Blocks manipulation attempts
-·	Hardcoded Secret Scanning - Finds API keys, passwords, tokens
-·	Dangerous Command Blocking - Prevents harmful operations
-·	Path Traversal Protection - Blocks unauthorized file access
-·	Vulnerable Pattern Detection - Identifies security issues
-Security levels:
-·	strict - Maximum protection
-·	balanced - Default (recommended)
-·	permissive - Minimal protection
-·	off - No scanning
+### v0.1 - Alpha (Current)
+- [x] Project structure
+- [x] Basic UI components
+- [x] Agent CRUD operations
+- [x] Dashboard layout
+- [ ] Ollama integration
+- [ ] Task execution
 
-🤖 Agent System
-Available Agent Roles
-Role	Expertise
-Architect	System design, architecture patterns
-Backend	Python, APIs, databases
-Frontend	React, Vue, TypeScript, CSS
-Fullstack	End-to-end development
-DevOps	CI/CD, Docker, Kubernetes
-QA	Testing, automation
-Security	Vulnerability scanning
-Reviewer	Code review, documentation
-ML Engineer	Machine learning, PyTorch
-Data Scientist	Analysis, pandas, visualization
-Mobile Dev	iOS, Android, Flutter
-Game Dev	Unity, Unreal, Godot
-Database Admin	PostgreSQL, MySQL, MongoDB
-Cloud Architect	AWS, GCP, Azure
-And 40+ more specialized roles!	
+### v0.2 - Beta
+- [ ] Multiple agent roles
+- [ ] Training sandbox
+- [ ] Memory system
+- [ ] Model management UI
 
-Agent Capabilities
-·	Auto-scaling - Up to 100 concurrent agents
-·	Load balancing - Intelligent task distribution
-·	Group support - Organize agents by function
-·	Role-based selection - Best agent for each task
+### v0.3 - Public Beta
+- [ ] Complete CEO dashboard
+- [ ] Performance analytics
+- [ ] Backup & restore
+- [ ] Documentation
 
-📁 Project Structure
-Plugex-Code/
-├── src/                    # Source code
-│   ├── core/              # Engine, config, guardrails
-│   ├── agents/            # Agent system (100 agents)
-│   ├── cli/               # Command-line interface
-│   ├── tools/             # Tool definitions
-│   └── plugins/           # KillPlug security plugin
-├── install.sh             # Installation script
-├── requirements.txt       # Python dependencies
-└── Plugex-Code           # Main executable
+### v1.0 - General Availability
+- [ ] All features complete
+- [ ] Security audit
+- [ ] App store submissions
 
+## 🔒 Security
 
-⚙️ Configuration
-Create ~/.plugex/config.yaml:
-llm:
-  provider: ollama
-  model: qwen2.5:7b
-  cloud_fallback: false
+- All data encrypted with AES-256-GCM
+- Password hashing with Argon2
+- Sandboxed agent execution
+- Resource limits enforced
+- Network access controlled
 
-security:
-  level: balanced  # strict, balanced, permissive, off
+## 📄 License
 
-glass_box:
-  enabled: true
-  show_reasoning: true
+Proprietary - All rights reserved
 
-mentor_mode:
-  enabled: false  # Get explanations while learning
+## 🤝 Contributing
 
+This is a commercial project. For partnership inquiries, contact: hello@agentcompany.os
 
-🔧 Development
-Run from Source
-cd ~/Plugex-Code
+## 💬 Support
 
-# Create virtual environment
-python3 -m venv .venv
-source .venv/bin/activate
+- Documentation: [Coming Soon]
+- Issues: GitHub Issues
+- Discord: [Coming Soon]
 
-# Install dependencies
-pip install -r requirements.txt
+---
 
-# Run the CLI
-python src/cli/chat_cli.py
-
-Run Tests
-pytest tests/
-
-
-🆘 Troubleshooting
-Command Not Found
-# Add to PATH
-export PATH="$HOME/.local/bin:$PATH"
-
-# Add to ~/.bashrc for persistence
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
-
-Model Not Available
-# For Ollama, pull the model
-ollama pull qwen 3.5:9B
-
-# Or use a different provider
-Plugex-Code --provider LM Studio -- Gemma:9B
-
-Permission Denied
-# Make executable
-chmod +x ~/Plugex-Code/Plugex-Code
-chmod +x ~/Plugex-Code/install.sh
-
-
-📝 License
-Custom License - See LICENSE file for details.
-
-🙏 Acknowledgments
-·	Built with ❤️ for the open-source community
-·	Powered by local LLMs (Ollama, llama.cpp)
-·	Security by KillPlug plugin architecture
-
-📞 Support
-·	Issues: GitHub Issues
-·	Discussions: GitHub Discussions
-
-Plugex-Code - Your AI pair programmer, running 100% locally. 🔌🚀
+**Agent Company OS** - Your AI employees. Your computer. Your data.
