@@ -122,25 +122,25 @@ agent-company-os/
 
 ## 📋 Roadmap
 
-### v0.1 - Alpha (Current)
+### v0.1 - Alpha 
 - [x] Project structure
 - [x] Basic UI components
 - [x] Agent CRUD operations
 - [x] Dashboard layout
-- [ ] Ollama integration
-- [ ] Task execution
+- [x] Ollama integration
+- [x] Task execution
 
 ### v0.2 - Beta
-- [ ] Multiple agent roles
-- [ ] Training sandbox
-- [ ] Memory system
-- [ ] Model management UI
+- [x] Multiple agent roles
+- [x] Training sandbox
+- [x] Memory system
+- [x] Model management UI
 
-### v0.3 - Public Beta
-- [ ] Complete CEO dashboard
-- [ ] Performance analytics
-- [ ] Backup & restore
-- [ ] Documentation
+### v0.3 - Public Beta (current)
+- [x] Complete CEO dashboard
+- [x] Performance analytics
+- [x] Backup & restore
+- [x] Documentation
 
 ### v1.0 - General Availability
 - [ ] All features complete
@@ -161,7 +161,7 @@ Proprietary - All rights reserved
 
 ## 🤝 Contributing
 
-This is a commercial project. For partnership inquiries, contact: hello@agentcompany.os
+This is a commercial project. For partnership inquiries, contact: coming soon
 
 ## 💬 Support
 
